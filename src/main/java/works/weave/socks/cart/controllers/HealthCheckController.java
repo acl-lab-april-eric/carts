@@ -31,8 +31,7 @@ public class HealthCheckController {
        HealthCheck app = new HealthCheck("carts", "OK", dateNow);
       
        HealthCheck database = new HealthCheck("carts-db", "OK", dateNow);
-
-       
+       // Add a comment
        try {
           mongoTemplate.executeCommand("{ buildInfo: 1 }");
        } catch (Exception e) {
